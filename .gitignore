@@ -1,0 +1,20 @@
+*
+# except for .cs files
+!*.sln
+!*.cs
+!*.csproj
+!*.gitattributes
+!*.gitignore
+!README.md
+
+# except for directories
+!*/
+
+# re-include subdirectories that contain .cs files
+!**/*.cs
+
+# ignore specific directories
+bin/
+obj/
+.vs/
+Properties/
