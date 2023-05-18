@@ -1,4 +1,6 @@
-﻿using Discord.CommandClassic;
+﻿using System;
+using System.Threading.Tasks;
+using Discord.CommandClassic;
 using Discord.WebSocket;
 
 namespace Discord.OnEvent {
@@ -22,7 +24,7 @@ namespace Discord.OnEvent {
         public Task Event(SocketMessage arg) {
             if (!arg.Author.IsBot && !string.IsNullOrWhiteSpace(arg.Content)) {
                 foreach (CommandClassicBase command in EventHandler.ClassicCommands) {
-                    if (!command.IsGlobal && arg.Author is not SocketGuildUser)
+                    if (!command.IsGlobal && !(arg.Author is SocketGuildUser))
                         continue;
 #pragma warning disable CS8602, CS8604 // Dereference of a possibly null reference.
                     if (command.Flags.HasFlag(CommandClassicFlags.Equals)) {

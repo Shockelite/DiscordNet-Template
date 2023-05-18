@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Discord.WebSocket;
 
 namespace Discord.CommandClassic {
@@ -104,7 +105,7 @@ namespace Discord.CommandClassic {
                 Flags |= CommandClassicFlags.Contains;
             if (!string.IsNullOrEmpty(_conditionEndsWith = endsWith))
                 Flags |= CommandClassicFlags.EndsWith;
-            if((_conditionRegex = regex) != null)
+            if ((_conditionRegex = regex) != null)
                 Flags |= CommandClassicFlags.Regex;
             if ((_conditionRandom = random) < 1.0f)
                 Flags |= CommandClassicFlags.Random;

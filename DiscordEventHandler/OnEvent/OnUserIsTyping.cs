@@ -1,4 +1,6 @@
-﻿namespace Discord.OnEvent {
+﻿using System.Threading.Tasks;
+
+namespace Discord.OnEvent {
 
     /// <inheritdoc cref="Discord.WebSocket.BaseSocketClient.UserIsTyping"/>
     public class OnUserIsTyping : OnEventBase {

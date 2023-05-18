@@ -1,4 +1,7 @@
-﻿using Discord.WebSocket;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Discord.WebSocket;
 
 namespace Discord.OnEvent {
 

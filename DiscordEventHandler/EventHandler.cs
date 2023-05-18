@@ -1,4 +1,5 @@
-﻿using Discord.CommandClassic;
+﻿using System.Collections.Generic;
+using Discord.CommandClassic;
 using Discord.CommandMessage;
 using Discord.CommandSlash;
 using Discord.CommandUser;

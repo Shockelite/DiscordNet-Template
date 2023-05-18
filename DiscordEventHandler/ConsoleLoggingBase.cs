@@ -1,4 +1,6 @@
-﻿namespace Discord {
+﻿using System;
+
+namespace Discord {
 
     /// <summary>
     /// Determines types of event to log to console.
