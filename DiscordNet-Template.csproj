@@ -4,10 +4,10 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>DiscordNet_Template</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>1.0.23108.36</AssemblyVersion>
-    <FileVersion>1.0.23108.36</FileVersion>
+    <AssemblyVersion>1.0.23169.0</AssemblyVersion>
+    <FileVersion>1.0.23169.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
