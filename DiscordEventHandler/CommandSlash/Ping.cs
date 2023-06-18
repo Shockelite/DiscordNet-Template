@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
-using Discord.WebSocket;
+﻿using Discord.WebSocket;
 
 namespace Discord.CommandSlash {
 
     /// <summary>
-    /// Get Id of message.
+    /// Reply to message with Pong!.
     /// </summary>
     public class Ping : CommandSlashBase {
 
