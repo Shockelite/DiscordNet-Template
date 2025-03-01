@@ -17,7 +17,7 @@ namespace Discord.OnEvent {
         /// <inheritdoc cref="BaseSocketClient.MessageCommandExecuted"/>
         public Task Event(SocketMessageCommand arg) {
             if (EventHandler.MessageCommands.TryGetValue(arg.CommandName, out var command) && command != null)
-                _ = Task.Run(() => command.Start(EventHandler, arg));
+                _ = Task.Run(() => command.OnStart(EventHandler, arg));
             else
                 LogWarning("No message command found for \"" + arg.CommandName + "\".");
             return Task.CompletedTask;

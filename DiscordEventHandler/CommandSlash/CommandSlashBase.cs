@@ -21,7 +21,7 @@ namespace Discord.CommandSlash {
         /// </summary>
         /// <param name="arg">Message object.</param>
         /// <returns></returns>
-        public virtual Task Start(EventHandler eventHandler, SocketSlashCommand arg) =>
+        public virtual Task OnStart(EventHandler eventHandler, SocketSlashCommand arg) =>
             Task.CompletedTask;
 
         /// <summary>

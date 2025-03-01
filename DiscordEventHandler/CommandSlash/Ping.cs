@@ -14,9 +14,9 @@ namespace Discord.CommandSlash {
         public override string GetName() =>
             GetType().Name.ToLower();
 
-        public override Task Start(EventHandler eventHandler, SocketSlashCommand arg) {
+        public override Task OnStart(EventHandler eventHandler, SocketSlashCommand arg) {
             arg.RespondAsync("Pong!", ephemeral: true);
-            return base.Start(eventHandler, arg);
+            return base.OnStart(eventHandler, arg);
         }
 
         public override SlashCommandBuilder GetBuilder() {

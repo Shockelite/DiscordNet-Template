@@ -14,9 +14,9 @@ namespace Discord.CommandUser {
         public override string GetName() =>
             "Get User Id";
 
-        public override Task Start(EventHandler eventHandler, SocketUserCommand arg) {
+        public override Task OnStart(EventHandler eventHandler, SocketUserCommand arg) {
             arg.RespondAsync("User Id: " + arg.Data.Member.Id, ephemeral: true);
-            return base.Start(eventHandler, arg);
+            return base.OnStart(eventHandler, arg);
         }
 
         public override UserCommandBuilder GetBuilder() {

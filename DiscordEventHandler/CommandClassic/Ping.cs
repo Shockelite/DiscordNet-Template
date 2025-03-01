@@ -11,9 +11,9 @@ namespace Discord.CommandClassic {
         /// <inheritdoc cref="Ping"/>
         public Ping() : base(true, startsWith: "!ping") { }
 
-        public override Task Start(EventHandler eventHandler, SocketMessage arg) {
+        public override Task OnStart(EventHandler eventHandler, SocketMessage arg) {
             arg.Channel.SendMessageAsync("Pong!");
-            return base.Start(eventHandler, arg);
+            return base.OnStart(eventHandler, arg);
         }
 
     }

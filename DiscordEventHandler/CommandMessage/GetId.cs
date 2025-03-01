@@ -14,9 +14,9 @@ namespace Discord.CommandMessage {
         public override string GetName() =>
             "Get Message Id";
 
-        public override Task Start(EventHandler eventHandler, SocketMessageCommand arg) {
+        public override Task OnStart(EventHandler eventHandler, SocketMessageCommand arg) {
             arg.RespondAsync("Message Id: " + arg.Data.Message.Id, ephemeral: true);
-            return base.Start(eventHandler, arg);
+            return base.OnStart(eventHandler, arg);
         }
 
         public override MessageCommandBuilder GetBuilder() {

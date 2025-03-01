@@ -17,7 +17,7 @@ namespace Discord.OnEvent {
         /// <inheritdoc cref="BaseSocketClient.UserCommandExecuted"/>
         public Task Event(SocketUserCommand arg) {
             if (EventHandler.UserCommands.TryGetValue(arg.CommandName, out var command) && command != null)
-                _ = Task.Run(() => command.Start(EventHandler, arg));
+                _ = Task.Run(() => command.OnStart(EventHandler, arg));
             else
                 LogWarning("No user command found for \"" + arg.CommandName + "\".");
             return Task.CompletedTask;

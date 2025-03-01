@@ -11,9 +11,9 @@ namespace Discord.CommandClassic {
         /// <inheritdoc cref="Rand"/>
         public Rand() : base(true, contains: "i like", random: 0.2f) { }
 
-        public override Task Start(EventHandler eventHandler, SocketMessage arg) {
+        public override Task OnStart(EventHandler eventHandler, SocketMessage arg) {
             arg.Channel.SendMessageAsync("Whatever floats your boat.");
-            return base.Start(eventHandler, arg);
+            return base.OnStart(eventHandler, arg);
         }
 
     }

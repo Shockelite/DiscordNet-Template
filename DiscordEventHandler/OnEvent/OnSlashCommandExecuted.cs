@@ -17,7 +17,7 @@ namespace Discord.OnEvent {
         /// <inheritdoc cref="BaseSocketClient.SlashCommandExecuted"/>
         public Task Event(SocketSlashCommand arg) {
             if (EventHandler.SlashCommands.TryGetValue(arg.CommandName, out var command) && command != null)
-                _ = Task.Run(() => command.Start(EventHandler, arg));
+                _ = Task.Run(() => command.OnStart(EventHandler, arg));
             else
                 LogWarning("No slash command found for \"" + arg.CommandName + "\".");
             return Task.CompletedTask;

@@ -21,7 +21,7 @@ namespace Discord.CommandUser {
         /// </summary>
         /// <param name="arg">Message object.</param>
         /// <returns></returns>
-        public virtual Task Start(EventHandler eventHandler, SocketUserCommand arg) =>
+        public virtual Task OnStart(EventHandler eventHandler, SocketUserCommand arg) =>
             Task.CompletedTask;
 
         /// <summary>

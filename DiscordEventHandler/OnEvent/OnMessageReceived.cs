@@ -44,7 +44,7 @@ namespace Discord.OnEvent {
 #pragma warning restore CS8602, CS8604 // Dereference of a possibly null reference.
                     if (command.Flags.HasFlag(CommandClassicFlags.Random) && rng.NextDouble() > command.ConditionRandom)
                         continue;
-                    Task.Run(() => command.Start(EventHandler, arg));
+                    Task.Run(() => command.OnStart(EventHandler, arg));
                     break;
                 }
             }

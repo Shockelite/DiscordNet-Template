@@ -117,7 +117,7 @@ namespace Discord.CommandClassic {
         /// <param name="eventHandler">EventHandler this was triggered from.</param>
         /// <param name="arg">Message object.</param>
         /// <returns></returns>
-        public virtual Task Start(EventHandler eventHandler, SocketMessage arg) =>
+        public virtual Task OnStart(EventHandler eventHandler, SocketMessage arg) =>
             Task.CompletedTask;
 
     }
