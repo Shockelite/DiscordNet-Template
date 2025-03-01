@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.IntegrationUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.IntegrationUpdated"/>
-        public Task Event(Discord.IIntegration arg) {
+        public Task Event(IIntegration arg) {
             return Task.CompletedTask;
         }
 

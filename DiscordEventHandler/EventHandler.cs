@@ -26,7 +26,12 @@ namespace Discord {
         public OnApplicationCommandCreated OnApplicationCommandCreated;
         public OnApplicationCommandDeleted OnApplicationCommandDeleted;
         public OnApplicationCommandUpdated OnApplicationCommandUpdated;
+        public OnAuditLogCreated OnAuditLogCreated;
         public OnAutocompleteExecuted OnAutocompleteExecuted;
+        public OnAutoModActionExecuted OnAutoModActionExecuted;
+        public OnAutoModRuleCreated OnAutoModRuleCreated;
+        public OnAutoModRuleDeleted OnAutoModRuleDeleted;
+        public OnAutoModRuleUpdated OnAutoModRuleUpdated;
         public OnButtonExecuted OnButtonExecuted;
         public OnChannelCreated OnChannelCreated;
         public OnChannelDestroyed OnChannelDestroyed;
@@ -34,6 +39,9 @@ namespace Discord {
         public OnConnected OnConnected;
         public OnCurrentUserUpdated OnCurrentUserUpdated;
         public OnDisconnected OnDisconnected;
+        public OnEntitlementCreated OnEntitlementCreated;
+        public OnEntitlementDeleted OnEntitlementDeleted;
+        public OnEntitlementUpdated OnEntitlementUpdated;
         public OnGuildAvailable OnGuildAvailable;
         public OnGuildJoin OnGuildJoin;
         public OnGuildJoinRequestDeleted OnGuildJoinRequestDeleted;
@@ -67,6 +75,8 @@ namespace Discord {
         public OnMessagesBulkDeleted OnMessagesBulkDeleted;
         public OnMessageUpdated OnMessageUpdated;
         public OnModalSubmitted OnModalSubmitted;
+        public OnPollVoteAdded OnPollVoteAdded;
+        public OnPollVoteRemoved OnPollVoteRemoved;
         public OnPresenceUpdated OnPresenceUpdated;
         public OnReactionAdded OnReactionAdded;
         public OnReactionRemoved OnReactionRemoved;
@@ -86,6 +96,9 @@ namespace Discord {
         public OnStageEnded OnStageEnded;
         public OnStageStarted OnStageStarted;
         public OnStageUpdated OnStageUpdated;
+        public OnSubscriptionCreated OnSubscriptionCreated;
+        public OnSubscriptionDeleted OnSubscriptionDeleted;
+        public OnSubscriptionUpdated OnSubscriptionUpdated;
         public OnThreadCreated OnThreadCreated;
         public OnThreadDeleted OnThreadDeleted;
         public OnThreadMemberJoined OnThreadMemberJoined;
@@ -140,7 +153,12 @@ namespace Discord {
             OnApplicationCommandCreated = new OnApplicationCommandCreated(this);
             OnApplicationCommandDeleted = new OnApplicationCommandDeleted(this);
             OnApplicationCommandUpdated = new OnApplicationCommandUpdated(this);
+            OnAuditLogCreated = new OnAuditLogCreated(this);
             OnAutocompleteExecuted = new OnAutocompleteExecuted(this);
+            OnAutoModActionExecuted = new OnAutoModActionExecuted(this);
+            OnAutoModRuleCreated = new OnAutoModRuleCreated(this);
+            OnAutoModRuleDeleted = new OnAutoModRuleDeleted(this);
+            OnAutoModRuleUpdated = new OnAutoModRuleUpdated(this);
             OnButtonExecuted = new OnButtonExecuted(this);
             OnChannelCreated = new OnChannelCreated(this);
             OnChannelDestroyed = new OnChannelDestroyed(this);
@@ -148,6 +166,9 @@ namespace Discord {
             OnConnected = new OnConnected(this);
             OnCurrentUserUpdated = new OnCurrentUserUpdated(this);
             OnDisconnected = new OnDisconnected(this);
+            OnEntitlementCreated = new OnEntitlementCreated(this);
+            OnEntitlementDeleted = new OnEntitlementDeleted(this);
+            OnEntitlementUpdated = new OnEntitlementUpdated(this);
             OnGuildAvailable = new OnGuildAvailable(this);
             OnGuildJoin = new OnGuildJoin(this);
             OnGuildJoinRequestDeleted = new OnGuildJoinRequestDeleted(this);
@@ -181,6 +202,8 @@ namespace Discord {
             OnMessagesBulkDeleted = new OnMessagesBulkDeleted(this);
             OnMessageUpdated = new OnMessageUpdated(this);
             OnModalSubmitted = new OnModalSubmitted(this);
+            OnPollVoteAdded = new OnPollVoteAdded(this);
+            OnPollVoteRemoved = new OnPollVoteRemoved(this);
             OnPresenceUpdated = new OnPresenceUpdated(this);
             OnReactionAdded = new OnReactionAdded(this);
             OnReactionRemoved = new OnReactionRemoved(this);
@@ -200,6 +223,9 @@ namespace Discord {
             OnStageEnded = new OnStageEnded(this);
             OnStageStarted = new OnStageStarted(this);
             OnStageUpdated = new OnStageUpdated(this);
+            OnSubscriptionCreated = new OnSubscriptionCreated(this);
+            OnSubscriptionDeleted = new OnSubscriptionDeleted(this);
+            OnSubscriptionUpdated = new OnSubscriptionUpdated(this);
             OnThreadCreated = new OnThreadCreated(this);
             OnThreadDeleted = new OnThreadDeleted(this);
             OnThreadMemberJoined = new OnThreadMemberJoined(this);

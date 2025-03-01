@@ -3,19 +3,19 @@ using Discord.WebSocket;
 
 namespace Discord.OnEvent {
 
-    /// <inheritdoc cref="BaseSocketClient.EntitlementCreated"/>
-    public class OnEntitlementCreated : OnEventBase {
+    /// <inheritdoc cref="BaseSocketClient.EntitlementDeleted"/>
+    public class OnEntitlementDeleted : OnEventBase {
 
-        public OnEntitlementCreated(EventHandler eventHandler) : base(eventHandler) { }
+        public OnEntitlementDeleted(EventHandler eventHandler) : base(eventHandler) { }
 
         public override void Subscribe() =>
-            EventHandler.Client.EntitlementCreated += Event;
+            EventHandler.Client.EntitlementDeleted += Event;
 
         public override void Unsubscribe() =>
-            EventHandler.Client.EntitlementCreated -= Event;
+            EventHandler.Client.EntitlementDeleted -= Event;
 
-        /// <inheritdoc cref="BaseSocketClient.EntitlementCreated"/>
-        private Task Event(SocketEntitlement arg) {
+        /// <inheritdoc cref="BaseSocketClient.EntitlementDeleted"/>
+        private Task Event(Cacheable<SocketEntitlement, ulong> arg) {
             return Task.CompletedTask;
         }
 

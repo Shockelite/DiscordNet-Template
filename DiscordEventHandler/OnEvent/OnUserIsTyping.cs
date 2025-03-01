@@ -1,8 +1,9 @@
 ﻿using System.Threading.Tasks;
+using Discord.WebSocket;
 
 namespace Discord.OnEvent {
 
-    /// <inheritdoc cref="Discord.WebSocket.BaseSocketClient.UserIsTyping"/>
+    /// <inheritdoc cref="BaseSocketClient.UserIsTyping"/>
     public class OnUserIsTyping : OnEventBase {
 
         public OnUserIsTyping(EventHandler eventHandler) : base(eventHandler) { }
@@ -13,8 +14,8 @@ namespace Discord.OnEvent {
         public override void Unsubscribe() =>
             EventHandler.Client.UserIsTyping -= Event;
 
-        /// <inheritdoc cref="Discord.WebSocket.BaseSocketClient.UserIsTyping"/>
-        public Task Event(Discord.Cacheable<Discord.IUser, ulong> arg1, Discord.Cacheable<Discord.IMessageChannel, ulong> arg2) {
+        /// <inheritdoc cref="BaseSocketClient.UserIsTyping"/>
+        public Task Event(Cacheable<IUser, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2) {
             return Task.CompletedTask;
         }
 
