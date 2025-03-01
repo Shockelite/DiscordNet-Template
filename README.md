@@ -18,6 +18,3 @@ To use the Discord.EventHandler in your existing project, simply copy DiscordEve
 
 ## Dependencies
 https://github.com/discord-net/Discord.Net v3.10.0
-
-### Thanks
-Like or hate, feedback is always appreciated.
