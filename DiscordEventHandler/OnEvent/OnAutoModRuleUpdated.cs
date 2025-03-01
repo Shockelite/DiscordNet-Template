@@ -16,7 +16,7 @@ namespace Discord.OnEvent {
 
         /// <inheritdoc cref="BaseSocketClient.AutoModRuleUpdated"/>
         private Task Event(Cacheable<SocketAutoModRule, ulong> arg1, SocketAutoModRule arg2) {
-            throw new System.NotImplementedException();
+            return Task.CompletedTask;
         }
 
     }

@@ -17,4 +17,4 @@ This is a barebones Discord bot to get you started. This includes an input liste
 To use the Discord.EventHandler in your existing project, simply copy DiscordEventHandler to your project directory. The only requirement for using Discord.EventHandler is the dependency listed below, which must be installed in your project prior to use.
 
 ## Dependencies
-https://github.com/discord-net/Discord.Net v3.10.0
+https://github.com/discord-net/Discord.Net v3.17.1
