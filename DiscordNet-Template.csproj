@@ -6,8 +6,8 @@
     <RootNamespace>DiscordNet_Template</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>1.0.23169.0</AssemblyVersion>
-    <FileVersion>1.0.23169.0</FileVersion>
+    <AssemblyVersion>1.0.25139.0</AssemblyVersion>
+    <FileVersion>1.0.25139.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
