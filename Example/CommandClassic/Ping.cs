@@ -9,7 +9,7 @@ namespace Discord.CommandClassic {
     public class Ping : CommandClassicBase {
 
         /// <inheritdoc cref="Ping"/>
-        public Ping() : base(true, startsWith: "!ping") { }
+        public Ping() : base(CommandContextType.Guild, startsWith: "!ping") { }
 
         public override Task OnStart(EventHandler eventHandler, SocketMessage arg) {
             arg.Channel.SendMessageAsync("Pong!");

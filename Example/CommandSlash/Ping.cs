@@ -9,7 +9,7 @@ namespace Discord.CommandSlash {
     public class Ping : CommandSlashBase {
 
         /// <inheritdoc cref="Ping"/>
-        public Ping() : base(true) { }
+        public Ping() : base(true, CommandContextType.Guild) { }
 
         public override string GetName() =>
             GetType().Name.ToLower();
@@ -24,7 +24,7 @@ namespace Discord.CommandSlash {
                 .WithName(GetName())
                 .WithDescription("Replies with Pong!")
                 .WithNsfw(false)
-                .WithDMPermission(false)
+                .WithContextTypes(GetInteractionContextType())
                 .WithDefaultPermission(false)
                 .WithDefaultMemberPermissions(GuildPermission.Administrator);
         }

@@ -9,7 +9,7 @@ namespace Discord.CommandClassic {
     public class Rand : CommandClassicBase {
 
         /// <inheritdoc cref="Rand"/>
-        public Rand() : base(true, contains: "i like", random: 0.2f) { }
+        public Rand() : base(CommandContextType.Guild, contains: "i like", random: 0.2f) { }
 
         public override Task OnStart(EventHandler eventHandler, SocketMessage arg) {
             arg.Channel.SendMessageAsync("Whatever floats your boat.");

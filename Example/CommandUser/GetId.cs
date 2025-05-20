@@ -9,7 +9,7 @@ namespace Discord.CommandUser {
     public class GetId : CommandUserBase {
 
         /// <inheritdoc cref="GetId"/>
-        public GetId() : base(true) { }
+        public GetId() : base(true, CommandContextType.Guild) { }
 
         public override string GetName() =>
             "Get User Id";
@@ -23,7 +23,7 @@ namespace Discord.CommandUser {
             return new UserCommandBuilder()
                 .WithName(GetName())
                 .WithNsfw(false)
-                .WithDMPermission(false)
+                .WithContextTypes(GetInteractionContextType())
                 .WithDefaultPermission(false)
                 .WithDefaultMemberPermissions(GuildPermission.Administrator);
         }

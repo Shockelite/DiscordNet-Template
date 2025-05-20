@@ -9,7 +9,7 @@ namespace Discord.CommandMessage {
     public class GetId : CommandMessageBase {
 
         /// <inheritdoc cref="GetId"/>
-        public GetId() : base(true) { }
+        public GetId() : base(true, CommandContextType.Guild) { }
 
         public override string GetName() =>
             "Get Message Id";
@@ -23,7 +23,7 @@ namespace Discord.CommandMessage {
             return new MessageCommandBuilder()
                 .WithName(GetName())
                 .WithNsfw(false)
-                .WithDMPermission(false)
+                .WithContextTypes(GetInteractionContextType())
                 .WithDefaultPermission(false)
                 .WithDefaultMemberPermissions(GuildPermission.Administrator);
         }
