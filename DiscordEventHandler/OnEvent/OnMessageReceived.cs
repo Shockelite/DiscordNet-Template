@@ -24,25 +24,25 @@ namespace Discord.OnEvent {
         public Task Event(SocketMessage arg) {
             if (!arg.Author.IsBot && !string.IsNullOrWhiteSpace(arg.Content)) {
                 foreach (CommandClassicBase command in EventHandler.ClassicCommands) {
-                    if (!command.IsGlobal && !(arg.Author is SocketGuildUser))
+                    if (command.ContextType == 0)
                         continue;
-#pragma warning disable CS8602, CS8604 // Dereference of a possibly null reference.
-                    if (command.Flags.HasFlag(CommandClassicFlags.Equals)) {
-                        if (!arg.Content.Equals(command.ConditionEquals, StringComparison.OrdinalIgnoreCase))
-                            continue;
-                    }
-                    else {
-                        if (command.Flags.HasFlag(CommandClassicFlags.StartsWith) && !arg.Content.StartsWith(command.ConditionStartsWith, StringComparison.OrdinalIgnoreCase))
-                            continue;
-                        if (command.Flags.HasFlag(CommandClassicFlags.Contains) && !arg.Content.Contains(command.ConditionContains, StringComparison.OrdinalIgnoreCase))
-                            continue;
-                        if (command.Flags.HasFlag(CommandClassicFlags.EndsWith) && !arg.Content.EndsWith(command.ConditionEndsWith, StringComparison.OrdinalIgnoreCase))
-                            continue;
-                        if (command.Flags.HasFlag(CommandClassicFlags.Regex) && !command.ConditionRegex.IsMatch(arg.Content))
-                            continue;
-                    }
-#pragma warning restore CS8602, CS8604 // Dereference of a possibly null reference.
-                    if (command.Flags.HasFlag(CommandClassicFlags.Random) && rng.NextDouble() > command.ConditionRandom)
+                    if (!command.ContextType.HasFlag(CommandContextType.Guild) && arg.Author is IGuildUser)
+                        continue;
+                    if (!command.ContextType.HasFlag(CommandContextType.DM) && arg.Channel is IDMChannel)
+                        continue;
+                    if (!command.ContextType.HasFlag(CommandContextType.Private) && arg.Channel is ISocketPrivateChannel)
+                        continue;
+                    if (command.ConditionEquals != null && !arg.Content.Equals(command.ConditionEquals, StringComparison.OrdinalIgnoreCase))
+                        continue;
+                    if (command.ConditionStartsWith != null && !arg.Content.StartsWith(command.ConditionStartsWith, StringComparison.OrdinalIgnoreCase))
+                        continue;
+                    if (command.ConditionContains != null && !arg.Content.Contains(command.ConditionContains, StringComparison.OrdinalIgnoreCase))
+                        continue;
+                    if (command.ConditionEndsWith != null && !arg.Content.EndsWith(command.ConditionEndsWith, StringComparison.OrdinalIgnoreCase))
+                        continue;
+                    if (command.ConditionRegex != null && !command.ConditionRegex.IsMatch(arg.Content))
+                        continue;
+                    if (command.ConditionRandom < 1.0f && rng.NextDouble() > command.ConditionRandom)
                         continue;
                     Task.Run(() => command.OnStart(EventHandler, arg));
                     break;
