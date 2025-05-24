@@ -26,10 +26,14 @@ namespace Discord {
             EventHandler eventHandler = new EventHandler(client)
                 .AddCommands(new CommandClassic.Ping(), new CommandClassic.Rand(), new CommandMessage.GetId(), new CommandSlash.Ping(), new CommandUser.GetId());
 
+            // Add overrided event.
+            eventHandler.OnReady = new OnEvent.OnReadyOverride(eventHandler);
+
             // Enable command related functions.
             eventHandler.OnSlashCommandExecuted.Subscribe();
             eventHandler.OnUserCommandExecuted.Subscribe();
             eventHandler.OnMessageCommandExecuted.Subscribe();
+            eventHandler.OnReady.Subscribe();
 
             // Only add this event if messages are available to view.
             if (config.GatewayIntents.HasFlag(GatewayIntents.MessageContent))
