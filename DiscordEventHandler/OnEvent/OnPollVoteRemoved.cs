@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.PollVoteRemoved -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.PollVoteRemoved"/>
-        private Task Event(Cacheable<IUser, ulong> arg1, Cacheable<ISocketMessageChannel, Rest.IRestMessageChannel, IMessageChannel, ulong> arg2, Cacheable<IUserMessage, ulong> arg3, Cacheable<SocketGuild, Rest.RestGuild, IGuild, ulong>? arg4, ulong arg5) {
+        protected virtual Task Event(Cacheable<IUser, ulong> arg1, Cacheable<ISocketMessageChannel, Rest.IRestMessageChannel, IMessageChannel, ulong> arg2, Cacheable<IUserMessage, ulong> arg3, Cacheable<SocketGuild, Rest.RestGuild, IGuild, ulong>? arg4, ulong arg5) {
             return Task.CompletedTask;
         }
 

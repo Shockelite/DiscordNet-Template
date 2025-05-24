@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.MessageUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.MessageUpdated"/>
-        public Task Event(Cacheable<IMessage, ulong> a, SocketMessage b, ISocketMessageChannel c) {
+        protected virtual Task Event(Cacheable<IMessage, ulong> a, SocketMessage b, ISocketMessageChannel c) {
             return Task.CompletedTask;
         }
 

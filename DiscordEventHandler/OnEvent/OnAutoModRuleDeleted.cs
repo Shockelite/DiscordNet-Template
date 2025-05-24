@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.AutoModRuleDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.AutoModRuleDeleted"/>
-        private Task Event(SocketAutoModRule arg) {
+        protected virtual Task Event(SocketAutoModRule arg) {
             return Task.CompletedTask;
         }
 

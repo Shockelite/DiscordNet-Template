@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ButtonExecuted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ButtonExecuted"/>
-        public Task Event(SocketMessageComponent a) {
+        protected virtual Task Event(SocketMessageComponent a) {
             return Task.CompletedTask;
         }
 

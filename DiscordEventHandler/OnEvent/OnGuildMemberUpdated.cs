@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildMemberUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildMemberUpdated"/>
-        public Task Event(Cacheable<SocketGuildUser, ulong> a, SocketGuildUser b) {
+        protected virtual Task Event(Cacheable<SocketGuildUser, ulong> a, SocketGuildUser b) {
             return Task.CompletedTask;
         }
 

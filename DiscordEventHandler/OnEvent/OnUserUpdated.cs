@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.UserUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.UserUpdated"/>
-        public Task Event(SocketUser before, SocketUser after) {
+        protected virtual Task Event(SocketUser before, SocketUser after) {
             return Task.CompletedTask;
         }
 

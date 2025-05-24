@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.RecipientAdded -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.RecipientAdded"/>
-        public Task Event(SocketGroupUser arg) {
+        protected virtual Task Event(SocketGroupUser arg) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.SpeakerRemoved -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.SpeakerRemoved"/>
-        public Task Event(SocketStageChannel arg1, SocketGuildUser arg2) {
+        protected virtual Task Event(SocketStageChannel arg1, SocketGuildUser arg2) {
             return Task.CompletedTask;
         }
 

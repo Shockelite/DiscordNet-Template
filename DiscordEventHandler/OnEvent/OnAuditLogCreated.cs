@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.AuditLogCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.AuditLogCreated"/>
-        private Task Event(SocketAuditLogEntry arg1, SocketGuild arg2) {
+        protected virtual Task Event(SocketAuditLogEntry arg1, SocketGuild arg2) {
             return Task.CompletedTask;
         }
 

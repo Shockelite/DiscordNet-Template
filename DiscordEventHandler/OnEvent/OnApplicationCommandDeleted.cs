@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ApplicationCommandDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ApplicationCommandDeleted"/>
-        public Task Event(SocketApplicationCommand arg) {
+        protected virtual Task Event(SocketApplicationCommand arg) {
             return Task.CompletedTask;
         }
 

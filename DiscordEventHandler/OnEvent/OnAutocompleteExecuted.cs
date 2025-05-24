@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.AutocompleteExecuted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.AutocompleteExecuted"/>
-        public Task Event(SocketAutocompleteInteraction arg) {
+        protected virtual Task Event(SocketAutocompleteInteraction arg) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.UserVoiceStateUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.UserVoiceStateUpdated"/>
-        public Task Event(SocketUser arg1, SocketVoiceState before, SocketVoiceState current) {
+        protected virtual Task Event(SocketUser arg1, SocketVoiceState before, SocketVoiceState current) {
             return Task.CompletedTask;
         }
 

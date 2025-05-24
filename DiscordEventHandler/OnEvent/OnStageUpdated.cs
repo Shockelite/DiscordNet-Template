@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.StageUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.StageUpdated"/>
-        public Task Event(SocketStageChannel arg1, SocketStageChannel arg2) {
+        protected virtual Task Event(SocketStageChannel arg1, SocketStageChannel arg2) {
             return Task.CompletedTask;
         }
 

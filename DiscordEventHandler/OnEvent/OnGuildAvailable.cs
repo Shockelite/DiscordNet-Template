@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildAvailable -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildAvailable"/>
-        public Task Event(SocketGuild a) {
+        protected virtual Task Event(SocketGuild a) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ThreadMemberLeft -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ThreadMemberLeft"/>
-        public Task Event(SocketThreadUser arg) {
+        protected virtual Task Event(SocketThreadUser arg) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ApplicationCommandUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ApplicationCommandUpdated"/>
-        public Task Event(SocketApplicationCommand arg) {
+        protected virtual Task Event(SocketApplicationCommand arg) {
             return Task.CompletedTask;
         }
 

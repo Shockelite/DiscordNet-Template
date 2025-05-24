@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.SpeakerAdded -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.SpeakerAdded"/>
-        public Task Event(SocketStageChannel arg1, SocketGuildUser arg2) {
+        protected virtual Task Event(SocketStageChannel arg1, SocketGuildUser arg2) {
             return Task.CompletedTask;
         }
 

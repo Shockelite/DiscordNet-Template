@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildScheduledEventCancelled -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildScheduledEventCancelled"/>
-        public Task Event(SocketGuildEvent arg) {
+        protected virtual Task Event(SocketGuildEvent arg) {
             return Task.CompletedTask;
         }
 

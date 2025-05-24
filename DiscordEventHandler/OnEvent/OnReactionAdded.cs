@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ReactionAdded -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ReactionAdded"/>
-        public Task Event(Cacheable<IUserMessage, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2, SocketReaction arg3) {
+        protected virtual Task Event(Cacheable<IUserMessage, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2, SocketReaction arg3) {
             return Task.CompletedTask;
         }
 

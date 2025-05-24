@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.UserIsTyping -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.UserIsTyping"/>
-        public Task Event(Cacheable<IUser, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2) {
+        protected virtual Task Event(Cacheable<IUser, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.InviteCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.InviteCreated"/>
-        public Task Event(SocketInvite a) {
+        protected virtual Task Event(SocketInvite a) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildUnavailable -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildUnavailable"/>
-        public Task Event(SocketGuild arg) {
+        protected virtual Task Event(SocketGuild arg) {
             return Task.CompletedTask;
         }
 

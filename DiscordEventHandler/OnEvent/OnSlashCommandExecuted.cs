@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.SlashCommandExecuted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.SlashCommandExecuted"/>
-        public Task Event(SocketSlashCommand arg) {
+        protected virtual Task Event(SocketSlashCommand arg) {
             if (EventHandler.SlashCommands.TryGetValue(arg.CommandName, out CommandSlash.CommandSlashBase? command) && command != null) {
                 if (command.ContextType == 0)
                     LogWarning("Slash command " + command.GetType().FullName + " was skipped because it was not given any permissions.");

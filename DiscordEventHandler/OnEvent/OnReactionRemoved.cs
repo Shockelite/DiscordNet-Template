@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ReactionRemoved -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ReactionRemoved"/>
-        public Task Event(Cacheable<IUserMessage, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2, SocketReaction arg3) {
+        protected virtual Task Event(Cacheable<IUserMessage, ulong> arg1, Cacheable<IMessageChannel, ulong> arg2, SocketReaction arg3) {
             return Task.CompletedTask;
         }
 

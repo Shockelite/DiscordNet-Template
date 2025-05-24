@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.EntitlementCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.EntitlementCreated"/>
-        private Task Event(SocketEntitlement arg) {
+        protected virtual Task Event(SocketEntitlement arg) {
             return Task.CompletedTask;
         }
 

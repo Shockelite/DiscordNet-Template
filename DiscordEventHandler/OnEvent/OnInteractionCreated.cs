@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.InteractionCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.InteractionCreated"/>
-        public Task Event(SocketInteraction arg) {
+        protected virtual Task Event(SocketInteraction arg) {
             return Task.CompletedTask;
         }
 

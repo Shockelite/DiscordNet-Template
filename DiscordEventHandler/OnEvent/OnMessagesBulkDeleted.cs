@@ -16,7 +16,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.MessagesBulkDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.MessagesBulkDeleted"/>
-        public Task Event(IReadOnlyCollection<Cacheable<IMessage, ulong>> arg1, Cacheable<IMessageChannel, ulong> arg2) {
+        protected virtual Task Event(IReadOnlyCollection<Cacheable<IMessage, ulong>> arg1, Cacheable<IMessageChannel, ulong> arg2) {
             return Task.CompletedTask;
         }
 

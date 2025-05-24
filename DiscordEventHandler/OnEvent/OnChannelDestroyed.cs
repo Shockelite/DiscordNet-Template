@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ChannelDestroyed -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ChannelDestroyed"/>
-        public Task Event(SocketChannel a) {
+        protected virtual Task Event(SocketChannel a) {
             return Task.CompletedTask;
         }
 

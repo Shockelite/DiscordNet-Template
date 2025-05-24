@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.RoleDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.RoleDeleted"/>
-        public Task Event(SocketRole arg) {
+        protected virtual Task Event(SocketRole arg) {
             return Task.CompletedTask;
         }
 

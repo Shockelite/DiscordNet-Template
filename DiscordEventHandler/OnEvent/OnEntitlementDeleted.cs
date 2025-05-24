@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.EntitlementDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.EntitlementDeleted"/>
-        private Task Event(Cacheable<SocketEntitlement, ulong> arg) {
+        protected virtual Task Event(Cacheable<SocketEntitlement, ulong> arg) {
             return Task.CompletedTask;
         }
 

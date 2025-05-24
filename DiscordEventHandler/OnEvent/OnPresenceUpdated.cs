@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.PresenceUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.PresenceUpdated"/>
-        public Task Event(SocketUser user, SocketPresence before, SocketPresence after) {
+        protected virtual Task Event(SocketUser user, SocketPresence before, SocketPresence after) {
             return Task.CompletedTask;
         }
 

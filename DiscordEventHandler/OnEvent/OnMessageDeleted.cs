@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.MessageDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.MessageDeleted"/>
-        public Task Event(Cacheable<IMessage, ulong> message, Cacheable<IMessageChannel, ulong> channel) {
+        protected virtual Task Event(Cacheable<IMessage, ulong> message, Cacheable<IMessageChannel, ulong> channel) {
             return Task.CompletedTask;
         }
 

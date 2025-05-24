@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ReactionsRemovedForEmote -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ReactionsRemovedForEmote"/>
-        public Task Event(Discord.Cacheable<Discord.IUserMessage, ulong> arg1, Discord.Cacheable<Discord.IMessageChannel, ulong> arg2, Discord.IEmote arg3) {
+        protected virtual Task Event(Discord.Cacheable<Discord.IUserMessage, ulong> arg1, Discord.Cacheable<Discord.IMessageChannel, ulong> arg2, Discord.IEmote arg3) {
             return Task.CompletedTask;
         }
 

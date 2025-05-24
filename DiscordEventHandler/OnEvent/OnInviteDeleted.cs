@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.InviteDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.InviteDeleted"/>
-        public Task Event(SocketGuildChannel channel, string code) {
+        protected virtual Task Event(SocketGuildChannel channel, string code) {
             return Task.CompletedTask;
         }
 

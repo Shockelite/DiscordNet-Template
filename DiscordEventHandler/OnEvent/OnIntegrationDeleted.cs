@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.IntegrationDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.IntegrationDeleted"/>
-        public Task Event(IGuild arg1, ulong arg2, Optional<ulong> arg3) {
+        protected virtual Task Event(IGuild arg1, ulong arg2, Optional<ulong> arg3) {
             return Task.CompletedTask;
         }
 

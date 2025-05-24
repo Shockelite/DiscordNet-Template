@@ -21,7 +21,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.MessageReceived -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.MessageReceived"/>
-        public Task Event(SocketMessage arg) {
+        protected virtual Task Event(SocketMessage arg) {
             if (!arg.Author.IsBot && !string.IsNullOrWhiteSpace(arg.Content)) {
                 foreach (CommandClassicBase command in EventHandler.ClassicCommands) {
                     if (command.ContextType == 0)

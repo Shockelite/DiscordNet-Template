@@ -16,7 +16,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.Disconnected -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.Disconnected"/>
-        public Task Event(Exception arg) {
+        protected virtual Task Event(Exception arg) {
             return Task.CompletedTask;
         }
 

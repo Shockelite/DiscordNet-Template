@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildJoinRequestDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildJoinRequestDeleted"/>
-        public Task Event(Cacheable<SocketGuildUser, ulong> a, SocketGuild b) {
+        protected virtual Task Event(Cacheable<SocketGuildUser, ulong> a, SocketGuild b) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.SelectMenuExecuted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.SelectMenuExecuted"/>
-        public Task Event(SocketMessageComponent arg) {
+        protected virtual Task Event(SocketMessageComponent arg) {
             return Task.CompletedTask;
         }
 

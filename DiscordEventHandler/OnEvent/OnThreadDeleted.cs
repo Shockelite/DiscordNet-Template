@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ThreadDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ThreadDeleted"/>
-        public Task Event(Discord.Cacheable<SocketThreadChannel, ulong> arg) {
+        protected virtual Task Event(Discord.Cacheable<SocketThreadChannel, ulong> arg) {
             return Task.CompletedTask;
         }
 

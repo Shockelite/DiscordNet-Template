@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.EntitlementUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.EntitlementUpdated"/>
-        private Task Event(Cacheable<SocketEntitlement, ulong> arg1, SocketEntitlement arg2) {
+        protected virtual Task Event(Cacheable<SocketEntitlement, ulong> arg1, SocketEntitlement arg2) {
             return Task.CompletedTask;
         }
 

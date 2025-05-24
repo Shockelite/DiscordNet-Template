@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.RecipientRemoved -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.RecipientRemoved"/>
-        public Task Event(SocketGroupUser arg) {
+        protected virtual Task Event(SocketGroupUser arg) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.Connected -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.Connected"/>
-        public Task Event() {
+        protected virtual Task Event() {
             return Task.CompletedTask;
         }
 

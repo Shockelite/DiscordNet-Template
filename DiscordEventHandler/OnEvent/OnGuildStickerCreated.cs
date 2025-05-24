@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildStickerCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildStickerCreated"/>
-        public Task Event(SocketCustomSticker arg) {
+        protected virtual Task Event(SocketCustomSticker arg) {
             return Task.CompletedTask;
         }
 

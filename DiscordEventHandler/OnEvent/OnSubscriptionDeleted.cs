@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.SubscriptionDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.SubscriptionDeleted"/>
-        public Task Event(Cacheable<SocketSubscription, ulong> arg) {
+        protected virtual Task Event(Cacheable<SocketSubscription, ulong> arg) {
             return Task.CompletedTask;
         }
 

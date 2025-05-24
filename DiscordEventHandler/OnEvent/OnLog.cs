@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.Log -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.Log"/>
-        public Task Event(LogMessage arg) {
+        protected virtual Task Event(LogMessage arg) {
             return Task.CompletedTask;
         }
 

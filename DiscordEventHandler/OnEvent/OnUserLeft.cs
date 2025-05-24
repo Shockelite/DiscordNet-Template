@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.UserLeft -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.UserLeft"/>
-        public Task Event(SocketGuild guild, SocketUser user) {
+        protected virtual Task Event(SocketGuild guild, SocketUser user) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.LatencyUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.LatencyUpdated"/>
-        public Task Event(int arg1, int arg2) {
+        protected virtual Task Event(int arg1, int arg2) {
             return Task.CompletedTask;
         }
 

@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.MessageCommandExecuted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.MessageCommandExecuted"/>
-        public Task Event(SocketMessageCommand arg) {
+        protected virtual Task Event(SocketMessageCommand arg) {
             if (EventHandler.MessageCommands.TryGetValue(arg.CommandName, out CommandMessage.CommandMessageBase? command) && command != null)
                 if (command.ContextType == 0)
                     LogWarning("Message command " + command.GetType().FullName + " was skipped because it was not given any permissions.");

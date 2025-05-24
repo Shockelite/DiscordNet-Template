@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.UserBanned -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.UserBanned"/>
-        public Task Event(SocketUser user, SocketGuild guild) {
+        protected virtual Task Event(SocketUser user, SocketGuild guild) {
             return Task.CompletedTask;
         }
 

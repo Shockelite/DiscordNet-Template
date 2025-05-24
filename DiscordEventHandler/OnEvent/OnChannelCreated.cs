@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ChannelCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ChannelCreated"/>
-        public Task Event(SocketChannel a) {
+        protected virtual Task Event(SocketChannel a) {
             return Task.CompletedTask;
         }
 

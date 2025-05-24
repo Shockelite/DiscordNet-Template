@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.SubscriptionUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.SubscriptionUpdated"/>
-        public Task Event(Cacheable<SocketSubscription, ulong> arg1, SocketSubscription arg2) { 
+        protected virtual Task Event(Cacheable<SocketSubscription, ulong> arg1, SocketSubscription arg2) { 
             return Task.CompletedTask;
         }
 

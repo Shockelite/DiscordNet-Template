@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.AutoModRuleCreated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.AutoModRuleCreated"/>
-        private Task Event(SocketAutoModRule arg) {
+        protected virtual Task Event(SocketAutoModRule arg) {
             return Task.CompletedTask;
         }
 

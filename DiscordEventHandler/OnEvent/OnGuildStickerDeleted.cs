@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildStickerDeleted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildStickerDeleted"/>
-        public Task Event(SocketCustomSticker arg) {
+        protected virtual Task Event(SocketCustomSticker arg) {
             return Task.CompletedTask;
         }
 

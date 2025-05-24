@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.RoleUpdated -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.RoleUpdated"/>
-        public Task Event(SocketRole arg1, SocketRole arg2) {
+        protected virtual Task Event(SocketRole arg1, SocketRole arg2) {
             return Task.CompletedTask;
         }
 

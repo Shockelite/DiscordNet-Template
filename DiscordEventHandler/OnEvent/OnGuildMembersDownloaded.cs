@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildMembersDownloaded -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildMembersDownloaded"/>
-        public Task Event(SocketGuild a) {
+        protected virtual Task Event(SocketGuild a) {
             return Task.CompletedTask;
         }
 

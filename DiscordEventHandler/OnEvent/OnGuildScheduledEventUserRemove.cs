@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.GuildScheduledEventUserRemove -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.GuildScheduledEventUserRemove"/>
-        public Task Event(Cacheable<SocketUser, Rest.RestUser, IUser, ulong> arg1, SocketGuildEvent arg2) {
+        protected virtual Task Event(Cacheable<SocketUser, Rest.RestUser, IUser, ulong> arg1, SocketGuildEvent arg2) {
             return Task.CompletedTask;
         }
 

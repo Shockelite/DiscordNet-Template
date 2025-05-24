@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ModalSubmitted -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ModalSubmitted"/>
-        public Task Event(SocketModal arg) {
+        protected virtual Task Event(SocketModal arg) {
             return Task.CompletedTask;
         }
 

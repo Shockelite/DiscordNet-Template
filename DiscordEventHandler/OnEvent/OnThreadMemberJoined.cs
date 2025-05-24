@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.ThreadMemberJoined -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.ThreadMemberJoined"/>
-        public Task Event(SocketThreadUser arg) {
+        protected virtual Task Event(SocketThreadUser arg) {
             return Task.CompletedTask;
         }
 

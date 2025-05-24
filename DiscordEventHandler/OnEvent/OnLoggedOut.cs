@@ -15,7 +15,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.LoggedOut -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.LoggedOut"/>
-        public Task Event() {
+        protected virtual Task Event() {
             return Task.CompletedTask;
         }
 

@@ -22,7 +22,7 @@ namespace Discord.OnEvent {
             EventHandler.Client.Ready -= Event;
 
         /// <inheritdoc cref="BaseSocketClient.Ready"/>
-        public Task Event() {
+        protected virtual Task Event() {
             if (doInit) {
                 doInit = false;
                 _ = Task.Run(async () => {
